@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Layout, {siteTitle} from "../components/layout";
-import utilStyles from '../styles/utils.module.css'
-import {getSortedPostsData} from "../utils/posts";
-import Link from "next/link"
-import Date from "../components/date";
+import Layout from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
+import { getSortedPostsData } from '../utils/posts';
+import Link from 'next/link';
+import Date from '../components/date';
+
 export interface HomeProps {
-  posts: any
+  posts: any;
 }
 
 export default function Home({ posts }: HomeProps) {
@@ -27,20 +27,18 @@ export default function Home({ posts }: HomeProps) {
                 <Date dateString={date} />
               </small>
             </li>
-
           ))}
         </ul>
       </section>
     </Layout>
-  )
+  );
 }
 
-
-export async function getStaticProps(): Promise<{props: HomeProps}> {
-  const posts = getSortedPostsData()
+export async function getStaticProps(): Promise<{ props: HomeProps }> {
+  const posts = getSortedPostsData();
   return {
     props: {
-      posts
-    }
-  }
+      posts,
+    },
+  };
 }
