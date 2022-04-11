@@ -3,20 +3,19 @@ import { getAllPostIds, getPostData } from '../../utils/posts';
 import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
-import { InferGetStaticPropsType } from 'next';
 
-export default function Post({ postData }: any) {
+export default function Post(props: any /*InferGetStaticPropsType<typeof getStaticProps>*/) {
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{props.postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1 className={utilStyles.headingXl}>{props.postData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <Date dateString={props.postData.date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }} />
       </article>
     </Layout>
   );
@@ -38,5 +37,3 @@ export async function getStaticProps({ params }: any) {
     },
   };
 }
-
-type a = InferGetStaticPropsType<typeof getStaticProps>;
