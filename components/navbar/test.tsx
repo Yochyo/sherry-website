@@ -13,7 +13,7 @@ const navigation = [
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-neutral-100">
+    <Disclosure as="nav" className="mb-12 bg-neutral-100">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
