@@ -24,11 +24,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       {/* Background desktop */}
       <div className="pointer-events-none hidden opacity-20 md:block">
-        <Image src="/background.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
+        <Image src="/background.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} alt="background" />
       </div>
       {/* background mobile */}
       <div className="pointer-events-none opacity-20 md:hidden">
-        <Image src="/background-mobile.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
+        <Image src="/background-mobile.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} alt="mobile-background" />
       </div>
 
       <C {...pageProps} />
@@ -45,7 +45,7 @@ const quotes = [
   'The most beautiful flower is the one you are holding.',
   'D-do you want to sleep on my tails >.<',
   '☆*: .｡. o(≧▽≦)o .｡.:*☆',
-  "it's Sherry, not cherry (>'-'<).",
+  "It's Sherry, not cherry (>'-'<).",
 ];
 
 export default MyApp;

@@ -10,8 +10,6 @@ export default function Ref() {
         <Section title={'General information'} src={'/images/ee77526164b7ea432a79a36654bc82facbc7a6431acfff92edaab7b94cfd215a.jpg'} className="grid gap-y-2 divide-y divide-neutral-200">
           <SectionMap title={'General information'} elements={general} />
           <SectionList title={'Personality'} elements={personality} />
-          <SectionList title={'Personality'} elements={personality} />
-          <SectionList title={'Personality'} elements={personality} />
           <SectionList title={'Likes'} elements={likes} />
           <SectionList title={'Dislikes'} elements={dislikes} />
         </Section>
@@ -44,7 +42,7 @@ const personality: string[] = [
   'Would do everything for people that mean a lot to her',
   'Wants to become an elementary school teacher',
 ];
-const likes: string[] = ['Reading books and novels', 'flowers (has a garden full of beautiful flowers)', 'fluffy and soft things', 'beautiful outfits and uniforms'];
+const likes: string[] = ['Reading books and novels', 'Flowers (has a garden full of beautiful flowers)', 'Fluffy and soft things', 'Beautiful outfits and uniforms'];
 const dislikes: string[] = ['Egoism', 'Corruption and unfair treatment'];
 // appearance
 
@@ -61,6 +59,6 @@ const tails = [
   'Has 9 tails',
   'Her tails are fluffy like fox tails',
   'They have suckers on them',
-  'she can slightly change the shape of her tails',
+  'She can slightly change the shape of her tails',
   'Can be used as tail pillow (a lap pillow but a million times softer), as blanket or to headpat',
 ];
