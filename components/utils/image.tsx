@@ -41,7 +41,7 @@ export const Image = (props: Props) => {
 function parseDimension(value: number | string | undefined): { value: number; suffix: string } {
   if (value == undefined) return { value: 0, suffix: '' };
   if (typeof value == 'number') return { value, suffix: '' };
-
+  //^\d+((\.|,)\d+)?$
   let split = value.split(/(\d+)/).filter(el => el != ''); //should have format [number, string | undefined]
   if (split.length == 0) throw new Error('height/width cannot be 0');
   if (isNaN(Number(split[0]))) throw new Error('height/width have to begin with a number');

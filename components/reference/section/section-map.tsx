@@ -4,7 +4,7 @@ import { SectionContainer } from './section-container';
 
 type Props = {
   title: string;
-  elements?: [string, string][];
+  elements: [string, string][];
 };
 export const SectionMap = (props: PropsWithChildren<Props>) => {
   return (

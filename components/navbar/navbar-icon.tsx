@@ -1,11 +1,11 @@
 import * as React from 'react';
+import { Image } from '../utils/image';
 
 type Props = {};
 export const NavbarIcon = (props: Props) => {
   return (
     <div className="flex flex-shrink-0 items-center">
-      {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" /> */}
-      <div className="text-4xl text-cyan-500">Logo</div>
+      <Image src="/logo.png" trueWidth={1200} trueHeight={1440} height="3rem" />
     </div>
   );
 };

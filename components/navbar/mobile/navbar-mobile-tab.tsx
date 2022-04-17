@@ -1,20 +1,21 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { Disclosure } from '@headlessui/react';
-import { NavigationItem } from '../models/navigation-item';
+import { NavigationItem } from '../navbar';
 
 type Props = {
   item: NavigationItem;
+  current: boolean;
 };
-export const NavbarMobileTab = ({ item }: Props) => {
+export const NavbarMobileTab = (props: Props) => {
   return (
     <Disclosure.Button
-      key={item.name}
+      key={props.item.name}
       as="a"
-      href={item.href}
-      className={classNames(item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium')}
-      aria-current={item.current ? 'page' : undefined}>
-      {item.name}
+      href={props.item.href}
+      className={classNames(props.current ? 'border-b-2 bg-neutral-200' : 'hover:border-b-2', 'block border-pink-300 px-3 py-2 text-base font-medium text-blue-900 hover:no-underline')}
+      aria-current={props.current ? 'page' : undefined}>
+      {props.item.name}
     </Disclosure.Button>
   );
 };

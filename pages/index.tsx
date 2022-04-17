@@ -1,5 +1,4 @@
 import { getSortedPostsData } from '../utils/posts';
-import Example from '../components/navbar/test';
 import { Image } from '../components/utils/image';
 
 // export default function Home() {
@@ -20,7 +19,6 @@ export interface HomeProps {
 export default function Home({ posts }: HomeProps) {
   return (
     <div>
-      <Example />
       <div className="overflow-x-hidden bg-pink-200">
         <div className="flex h-80 w-fit justify-center">
           <Image src="/images/43c3ef772b8ced76b2e784c6f5981ebc11dcae91c34c9f0d3a213fbf9e2d31bc.png" height="20rem" trueWidth={3821} trueHeight={2256} alt="img" />
