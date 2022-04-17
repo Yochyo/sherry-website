@@ -3,15 +3,24 @@ import type { AppProps } from 'next/app';
 import Image from 'next/image';
 import { Footer } from '../components/footer/footer';
 import Navbar from '../components/navbar/navbar';
+import { useEffect, useState } from 'react';
+import { AboutBanner } from '../components/reference/about-banner';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [quote, setQuote] = useState('');
+
+  useEffect(() => {
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+  }, []);
+
   // @ts-ignore
   let C = Component as any;
   return (
     <div className="relative">
-      <div className="mb-12">
+      <div className="mb-2 sm:mb-6 md:mb-12">
         <Navbar />
       </div>
+      <AboutBanner text={quote} />
 
       {/* Background desktop */}
       <div className="pointer-events-none hidden opacity-20 md:block">
@@ -30,5 +39,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     </div>
   );
 }
+
+const quotes = [
+  'A soft tail a day takes the doctor away.',
+  'The most beautiful flower is the one you are holding.',
+  'D-do you want to sleep on my tails >.<',
+  '☆*: .｡. o(≧▽≦)o .｡.:*☆',
+  "it's Sherry, not cherry (>'-'<).",
+];
 
 export default MyApp;
