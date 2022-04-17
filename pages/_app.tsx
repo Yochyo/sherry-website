@@ -12,11 +12,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       {/* Background desktop */}
       <div className="pointer-events-none hidden opacity-20 md:block">
-        <Image src="/background3.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
+        <Image src="/background.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
       </div>
       {/* background mobile */}
       <div className="pointer-events-none opacity-20 md:hidden">
-        <Image src="/background3-3.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
+        <Image src="/background-mobile.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
       </div>
 
       <C {...pageProps} />
