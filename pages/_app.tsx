@@ -9,7 +9,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   let C = Component as any;
   return (
     <div className="relative">
-      <Navbar />
+      <div className="mb-12">
+        <Navbar />
+      </div>
+
       {/* Background desktop */}
       <div className="pointer-events-none hidden opacity-20 md:block">
         <Image src="/background.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} />
@@ -21,7 +24,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <C {...pageProps} />
 
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

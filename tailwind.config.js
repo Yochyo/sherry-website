@@ -5,5 +5,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('./tailwind/min-width')],
+  plugins: [require('./tailwind/min-width-height')],
 };

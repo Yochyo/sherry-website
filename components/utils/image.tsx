@@ -15,7 +15,7 @@ type Props = {
   resizeBy?: 'height' | 'width';
 } & Partial<ImageProps>;
 export const Image = (props: Props) => {
-  const resizeBy = props.resizeBy || props.height ? 'height' : 'width';
+  const resizeBy = props.resizeBy || (props.height ? 'height' : 'width');
   if (!props[resizeBy]) throw new Error('either height or width have to be specified');
 
   const height = parseDimension(props.height);
@@ -24,6 +24,7 @@ export const Image = (props: Props) => {
 
   const renderedWidth = resizeBy == 'width' ? width.value : props.trueWidth / (props.trueHeight / height.value);
   const renderedHeight = resizeBy == 'height' ? height.value : props.trueHeight / (props.trueWidth / width.value);
+  console.log({ renderedWidth, renderedHeight });
   return (
     <div className="relative" style={{ height: `${renderedHeight}${suffix}`, width: `${renderedWidth}${suffix}` }}>
       <NextImage src={props.src} layout={'fill'} />

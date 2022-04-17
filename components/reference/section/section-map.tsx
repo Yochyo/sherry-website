@@ -9,14 +9,12 @@ type Props = {
 export const SectionMap = (props: PropsWithChildren<Props>) => {
   return (
     <SectionContainer title={props.title}>
-      <>
-        {props.elements?.map(([k, v]) => (
-          <div key={k} className="flex">
-            <p className="min-w-6 font-semibold">{k}:</p>
-            <p className="">{v}</p>
-          </div>
-        ))}
-      </>
+      {props.elements?.map(([k, v]) => (
+        <div key={k} className="flex">
+          <p className="min-w-6 font-semibold">{k}:</p>
+          <p>{v}</p>
+        </div>
+      ))}
     </SectionContainer>
   );
 };

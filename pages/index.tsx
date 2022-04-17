@@ -1,6 +1,6 @@
 import { getSortedPostsData } from '../utils/posts';
-import { Image } from '../components/utils/image';
-
+import NextImage from 'next/image';
+// import { Image } from '../components/utils/image';
 // export default function Home() {
 //   return (
 //     <div className="bg-gray-100">
@@ -18,16 +18,11 @@ export interface HomeProps {
 
 export default function Home({ posts }: HomeProps) {
   return (
-    <div>
-      <div className="overflow-x-hidden bg-pink-200">
-        <div className="flex h-80 w-fit justify-center">
-          <Image src="/images/43c3ef772b8ced76b2e784c6f5981ebc11dcae91c34c9f0d3a213fbf9e2d31bc.png" height="20rem" trueWidth={3821} trueHeight={2256} alt="img" />
-          <Image src="/images/0199014a753fc67a309433b5993f575d50c6c3f44779ef6c72017e712543c0c5.png" height="20rem" trueWidth={3840} trueHeight={2160} alt="img" />
-          <Image src="/images/b9eb0b22727b693b1ff8ac6c15ecb18994cf7e7680425e87ecbde543e62c0d21.png" height="20rem" trueWidth={1800} trueHeight={2160} alt="img" />
-          <Image src="/images/becd63170eb60f454cd9a00c5442b90365b64d1949209ba712fe8ecbc39db972.png" height="20rem" trueWidth={800} trueHeight={1753} alt="img" />
-          <Image src="/images/9b9eedbc23114b1f4e6877bd1787ba3b8c09ba844fed5d66ccc8a350f31e0233.jpg" height="20rem" trueWidth={1000} trueHeight={1416} alt="img" />
-          <Image src="/images/e764a2d9c9d91ed8f0078da0fbc0ddd08b1853aec585518396e2e891442acfb8.png" height="20rem" trueWidth={1668} trueHeight={2224} alt="img" />
-        </div>
+    <div className="px-1 pb-1 sm:px-2 sm:pb-2 md:px-4 md:pb-4">
+      {/* <NextImage src="/images/43c3ef772b8ced76b2e784c6f5981ebc11dcae91c34c9f0d3a213fbf9e2d31bc.png" width="100%" resizeBy="width" trueWidth={3821} trueHeight={2256} alt="img" /> */}
+      <div className="grid gap-2 md:grid-cols-2 md:gap-4">
+        <NextImage src="/images/43c3ef772b8ced76b2e784c6f5981ebc11dcae91c34c9f0d3a213fbf9e2d31bc.jpg" layout={'responsive'} width="2560" height="1440" alt="img" />
+        <NextImage src="/images/2368f83b77e26b151acf180c78906ca3492aafeb088583f55b4f047fec385401.jpg" layout={'responsive'} width="2560" height="1440" alt="img" />
       </div>
     </div>
   );
