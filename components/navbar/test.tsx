@@ -5,10 +5,10 @@ import { NavbarIcon } from './navbar-icon';
 import { NavbarMobileTabPanel } from './mobile/navbar-mobile-tab-panel';
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
+  { name: 'Home', href: '/', current: true },
   { name: 'Gallery', href: '#', current: false },
   { name: 'About', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
+  { name: 'Reference', href: '/ref', current: false },
 ];
 
 export default function Example() {

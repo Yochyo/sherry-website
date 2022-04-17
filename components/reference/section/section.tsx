@@ -11,7 +11,7 @@ type Props = {
 export const Section = (props: PropsWithChildren<Props>) => {
   return (
     <div className="grid md:grid-cols-2">
-      <div className="relative mr-16 hidden md:block">
+      <div className="relative hidden md:block">
         <Image layout={'fill'} objectFit={'cover'} src={props.src} objectPosition={'top'} draggable={false} />
       </div>
       {/* <h1 className="text-2xl text-blue-900">{props.title}</h1> */}

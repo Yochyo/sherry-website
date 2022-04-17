@@ -10,14 +10,9 @@ type Props = {
 export default function Ref(props: Props) {
   return (
     <div>
-      <AboutBanner
-        text={
-          // 'Sherry was initially a clone of the goddess of creation to reign over the mortal realm. Thanks to some lucky incidents, she gained independance and travelled to a time where she could be free.'
-          "Should sherry's history be written here? or maybe a random quote?"
-        }
-      />
+      <AboutBanner text={"Should sherry's history be written here? or maybe a random quote?"} />
       {/* <Title text={'Reference'} /> */}
-      <div className="pt-8">
+      <div className="py-8">
         <Section title={'General information'} src={'/images/ee77526164b7ea432a79a36654bc82facbc7a6431acfff92edaab7b94cfd215a.jpg'} className="grid gap-y-2 divide-y divide-neutral-200">
           <SectionMap title={'General information'} elements={general} />
           <SectionList title={'Personality'} elements={personality} />
