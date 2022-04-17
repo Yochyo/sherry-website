@@ -11,9 +11,9 @@ export const SectionList = (props: PropsWithChildren<Props>) => {
     <SectionContainer title={props.title}>
       <>
         {props.elements?.map(e => (
-          <>
-            <p className="pl-24">- {e}</p>
-          </>
+          <p key={e} className="pl-24">
+            - {e}
+          </p>
         ))}
       </>
     </SectionContainer>
