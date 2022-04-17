@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nextjs:
+    build: .
+    restart: always
+    networks:
+      - nginx
+networks:
+  nginx:
+    external: true
+
