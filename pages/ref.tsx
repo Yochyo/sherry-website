@@ -1,16 +1,11 @@
 import * as React from 'react';
-import { AboutBanner } from '../components/reference/about-banner';
 import { Section } from '../components/reference/section/section';
 import { SectionList } from '../components/reference/section/section-list';
 import { SectionMap } from '../components/reference/section/section-map';
 
-type Props = {
-  text: string;
-};
-export default function Ref(props: Props) {
+export default function Ref() {
   return (
     <div>
-      <AboutBanner text={"Should sherry's history be written here? or maybe a random quote?"} />
       <div className="pt-4">
         <Section title={'General information'} src={'/images/ee77526164b7ea432a79a36654bc82facbc7a6431acfff92edaab7b94cfd215a.jpg'} className="grid gap-y-2 divide-y divide-neutral-200">
           <SectionMap title={'General information'} elements={general} />
@@ -35,7 +30,7 @@ export default function Ref(props: Props) {
 const general: [string, string][] = [
   ['Name', 'Sherry'],
   ['Gender', 'Female'],
-  ['Age', 'Late tens'],
+  ['Age', '17-19 (her real age is a secret)'],
   ['Race', 'Foxtopus (half octopus, half fox)'],
 ];
 
