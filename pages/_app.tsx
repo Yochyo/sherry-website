@@ -46,6 +46,10 @@ const quotes = [
   'D-do you want to sleep on my tails >.<',
   '☆*: .｡. o(≧▽≦)o .｡.:*☆',
   "It's Sherry, not cherry (>'-'<).",
+  'Today was a lot of fun ^^',
+  'Thanks for keeping me company : )',
+  "What's this? I-it's for me? （*゜ー゜*）",
+  "I'm in a video game? I would love to see it.",
 ];
 
 export default MyApp;
