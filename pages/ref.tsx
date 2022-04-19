@@ -12,6 +12,8 @@ export default function Ref() {
           <SectionList title={'Personality'} elements={personality} />
           <SectionList title={'Likes'} elements={likes} />
           <SectionList title={'Dislikes'} elements={dislikes} />
+          <SectionList title={'Favorite food'} elements={favoriteFood} />
+          <SectionList title={'Dislikes food'} elements={dislikesFood} />
         </Section>
       </div>
       <div className="mt-8 mb-4 md:mt-32">
@@ -29,6 +31,7 @@ const general: [string, string][] = [
   ['Name', 'Sherry'],
   ['Gender', 'Female'],
   ['Age', '17-19 (her real age is a secret)'],
+  ['Birthday', '30th march'],
   ['Race', 'Foxtopus (half octopus, half fox)'],
 ];
 
@@ -42,8 +45,11 @@ const personality: string[] = [
   'Would do everything for people that mean a lot to her',
   'Wants to become an elementary school teacher',
 ];
-const likes: string[] = ['Reading books and novels', 'Flowers (has a garden full of beautiful flowers)', 'Fluffy and soft things', 'Beautiful outfits and uniforms'];
+const likes: string[] = ['Reading books and novels', 'Flowers (has a garden full of beautiful flowers)', 'Fluffy and soft things', 'Beautiful outfits and uniforms', 'Hugs'];
 const dislikes: string[] = ['Egoism', 'Corruption and unfair treatment'];
+const favoriteFood: string[] = ['Everything you eat at picnics (especially sandwiches)', 'All kinds of other fruits', 'Ice cream (especially rose flavored)', 'Pasta'];
+const dislikesFood = ['Very sweet things like caramel (will eat it nonetheless)'];
+
 // appearance
 
 const generalAppearance: [string, string][] = [
