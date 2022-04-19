@@ -17,7 +17,7 @@ export default function Ref() {
         </Section>
       </div>
       <div className="mt-8 mb-4 md:mt-32">
-        <Section title={'Appearance'} src={'/images/431.jpg'} className="grid gap-y-2 divide-y divide-neutral-200">
+        <Section title={'Appearance'} src={'/images/landscape/431.jpg'} className="grid gap-y-2 divide-y divide-neutral-200">
           <SectionMap title={'General appearance'} elements={generalAppearance} />
           <SectionList title={''} elements={generalAppearance1} />
           <SectionList title={'Tails'} elements={tails} />

@@ -5,13 +5,15 @@ import { Footer } from '../components/footer/footer';
 import Navbar from '../components/navbar/navbar';
 import { useEffect, useState } from 'react';
 import { AboutBanner } from '../components/reference/about-banner';
+import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [quote, setQuote] = useState('');
+  const router = useRouter();
 
   useEffect(() => {
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-  }, []);
+  }, [router.asPath]);
 
   // @ts-ignore
   let C = Component as any;
@@ -24,11 +26,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       {/* Background desktop */}
       <div className="pointer-events-none hidden opacity-20 md:block">
-        <Image src="/background.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} alt="background" />
+        <Image src="/background.jpg" layout={'fill'} objectFit={'cover'} objectPosition={'top'} alt="background" />
       </div>
       {/* background mobile */}
       <div className="pointer-events-none opacity-20 md:hidden">
-        <Image src="/background-mobile.jpg" layout={'fill'} quality={100} objectFit={'cover'} objectPosition={'top'} alt="mobile-background" />
+        <Image src="/background-mobile.jpg" layout={'fill'} objectFit={'cover'} objectPosition={'top'} alt="mobile-background" />
       </div>
 
       <C {...pageProps} />
