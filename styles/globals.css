@@ -12,20 +12,8 @@ body {
   font-size: 18px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+/*@layer utilities {*/
+  .aspect-4-3 {
+    aspect-ratio: 4/3;
+  }
+/*}*/

@@ -5,9 +5,5 @@ services:
     container_name: sherry-website
     build: .
     restart: always
-    networks:
-      - nginx
-networks:
-  nginx:
-    external: true
-
+    ports:
+      - "3000:3000"

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import NextImage from 'next/image';
 import { ImageProps } from 'next/dist/client/image';
+import classNames from 'classnames';
 
 type Props = {
   src: string;
@@ -25,7 +26,7 @@ export const Image = (props: Props) => {
   const renderedWidth = resizeBy == 'width' ? width.value : props.trueWidth / (props.trueHeight / height.value);
   const renderedHeight = resizeBy == 'height' ? height.value : props.trueHeight / (props.trueWidth / width.value);
   return (
-    <div className="relative" style={{ height: `${renderedHeight}${suffix}`, width: `${renderedWidth}${suffix}` }}>
+    <div className={classNames(props.className, 'relative')} style={{ height: `${renderedHeight}${suffix}`, width: `${renderedWidth}${suffix}` }}>
       <NextImage src={props.src} layout={'fill'} />
     </div>
   );
