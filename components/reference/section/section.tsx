@@ -4,7 +4,6 @@ import Image from 'next/image';
 import classNames from 'classnames';
 
 type Props = {
-  title: string;
   src: string;
   className: string;
 };

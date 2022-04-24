@@ -12,10 +12,10 @@ export type NavigationItem = {
 };
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '/' },
-  { name: 'Gallery', href: '/gallery' },
-  { name: 'About', href: '/about' },
-  { name: 'Reference', href: '/ref' },
+  { name: 'tabs.home', href: '/' },
+  { name: 'tabs.gallery', href: '/gallery' },
+  { name: 'tabs.about', href: '/about' },
+  { name: 'tabs.reference', href: '/ref' },
 ];
 
 type Props = {};
@@ -25,7 +25,7 @@ export default function Navbar() {
   const path = router.asPath;
 
   return (
-    <Disclosure as="nav" className="bg-neutral-100">
+    <Disclosure as="nav" className="mb-2 bg-neutral-100 sm:mb-6 md:mb-12">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -51,6 +51,10 @@ export default function Navbar() {
                 {/* tabs if desktop */}
                 <NavbarTabs navigation={navigation} currentPath={path} />
               </div>
+              {/* <div className="absolute inset-y-0 right-0 flex items-center"> */}
+              {/*   /!* language change button*!/ */}
+              {/*   <NavbarLanguageButton /> */}
+              {/* </div> */}
             </div>
           </div>
           <NavbarMobileTabPanel navigation={navigation} currentPath={path} />

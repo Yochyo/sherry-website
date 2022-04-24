@@ -1,0 +1,21 @@
+{
+  "twitter": "ツイッター",
+  "backstory": {
+    "title": "バックストーリー",
+    "description": "シェリーは当初、人間界に君臨する創造の女神のクローンであった。しかし、いくつかの幸運な出来事のおかげで、彼女は独立し、自由になることができる時代に旅立った。"
+  },
+  "contact": {
+    "title": "連絡先",
+    "ko-fi": "Ko-fi",
+    "twitter": "ツイッター"
+  },
+  "links": {
+    "title": "リンク集",
+    "gallery": "ギャラリー",
+    "thank_you": "ありがとうございました。"
+  },
+  "copyright": {
+    "copyright": "著作権について",
+    "name": "Yochyo"
+  }
+}

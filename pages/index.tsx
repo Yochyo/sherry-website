@@ -1,8 +1,11 @@
 import NextImage from 'next/image';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
   const [rightImage, setRightImage] = useState<string | undefined>(undefined);
+  const { t } = useTranslation('footer', { useSuspense: false });
 
   useEffect(() => {
     setRightImage(rightImages[Math.floor(Math.random() * rightImages.length)]);
@@ -27,3 +30,11 @@ const rightImages = [
   '/images/landscape/431.jpg',
   '/images/landscape/2368f83b77e26b151acf180c78906ca3492aafeb088583f55b4f047fec385401.jpg',
 ];
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['header', 'footer', 'ref'])),
+    },
+  };
+}

@@ -1,0 +1,21 @@
+{
+  "twitter": "Twitter",
+  "backstory": {
+    "title": "Backstory",
+    "description": "Sherry was initially a clone of the goddess of creation to reign over the mortal realm. Thanks to some lucky incidents, she gained independence and travelled to a time where she could be free."
+  },
+  "contact": {
+    "title": "Contact",
+    "ko-fi": "Ko-fi",
+    "twitter": "Twitter"
+  },
+  "links": {
+    "title": "Links",
+    "gallery": "Gallery",
+    "thank_you": "Thank you"
+  },
+  "copyright": {
+    "copyright": "Copyright",
+    "name": "Yochyo"
+  }
+}

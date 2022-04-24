@@ -3,26 +3,16 @@ import type { AppProps } from 'next/app';
 import Image from 'next/image';
 import { Footer } from '../components/footer/footer';
 import Navbar from '../components/navbar/navbar';
-import { useEffect, useState } from 'react';
 import { AboutBanner } from '../components/reference/about-banner';
-import { useRouter } from 'next/router';
+import { appWithTranslation } from 'next-i18next';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [quote, setQuote] = useState('');
-  const router = useRouter();
-
-  useEffect(() => {
-    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-  }, [router.asPath]);
-
   // @ts-ignore
   let C = Component as any;
   return (
     <div className="relative">
-      <div className="mb-2 sm:mb-6 md:mb-12">
-        <Navbar />
-      </div>
-      <AboutBanner text={quote} />
+      <Navbar />
+      <AboutBanner />
 
       {/* Background desktop */}
       <div className="pointer-events-none hidden opacity-20 md:block">
@@ -35,23 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <C {...pageProps} />
 
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
 
-const quotes = [
-  'A soft tail a day takes the doctor away.',
-  'The most beautiful flower is the one you are holding.',
-  'D-do you want to sleep on my tails >.<',
-  '☆*: .｡. o(≧▽≦)o .｡.:*☆',
-  "It's Sherry, not cherry (>'-'<).",
-  'Today was a lot of fun ^^',
-  'Thanks for keeping me company : )',
-  "What's this? I-it's for me? （*゜ー゜*）",
-  "I'm in a video game? I would love to see it.",
-];
-
-export default MyApp;
+export default appWithTranslation(MyApp);

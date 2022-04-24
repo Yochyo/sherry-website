@@ -11,7 +11,7 @@ export const SectionMap = (props: PropsWithChildren<Props>) => {
     <SectionContainer title={props.title}>
       {props.elements?.map(([k, v]) => (
         <div key={k} className="flex">
-          <p className="min-w-6 font-semibold">{k}:</p>
+          <p className="font-semibold min-w-6">{k}:</p>
           <p>{v}</p>
         </div>
       ))}

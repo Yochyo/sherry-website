@@ -1,23 +1,20 @@
 import * as React from 'react';
+import { useTranslation } from 'next-i18next';
 
 type Props = {};
 export const FooterLinks = (props: Props) => {
+  const { t } = useTranslation('footer');
   return (
     <div className="">
-      <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">Links</h6>
+      <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">{t('links.title')}</h6>
       <p className="mb-2">
         <a href="#!" className="text-gray-600">
-          Artists
+          {t('links.gallery')}
         </a>
       </p>
       <p className="mb-2">
         <a href="#!" className="text-gray-600">
-          Gallery
-        </a>
-      </p>
-      <p>
-        <a href="#!" className="text-gray-600">
-          Thank you
+          {t('links.thank_you')}
         </a>
       </p>
     </div>
