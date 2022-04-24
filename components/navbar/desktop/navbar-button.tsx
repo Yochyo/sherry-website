@@ -1,8 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import Link from 'next/link';
 import { NavigationItem } from '../navbar';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 type Props = {
   item: NavigationItem;

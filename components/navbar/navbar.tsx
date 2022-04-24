@@ -3,8 +3,9 @@ import { Disclosure } from '@headlessui/react';
 import { NavbarIcon } from './navbar-icon';
 import { NavbarMobileMenuButton } from './mobile/navbar-mobile-menu-button';
 import { NavbarTabs } from './desktop/navbar-tabs';
-import { NavbarMobileTabPanel } from './mobile/navbar-mobile-tab-panel';
+import { NavbarMobileTabs } from './mobile/navbar-mobile-tabs';
 import { useRouter } from 'next/router';
+import { NavbarLanguageButton } from './navbar-language-button';
 
 export type NavigationItem = {
   name: string;
@@ -51,13 +52,13 @@ export default function Navbar() {
                 {/* tabs if desktop */}
                 <NavbarTabs navigation={navigation} currentPath={path} />
               </div>
-              {/* <div className="absolute inset-y-0 right-0 flex items-center"> */}
-              {/*   /!* language change button*!/ */}
-              {/*   <NavbarLanguageButton /> */}
-              {/* </div> */}
+              <div className="absolute inset-y-0 right-0 flex items-center">
+                {/* language change button*/}
+                <NavbarLanguageButton />
+              </div>
             </div>
           </div>
-          <NavbarMobileTabPanel navigation={navigation} currentPath={path} />
+          <NavbarMobileTabs navigation={navigation} currentPath={path} />
         </>
       )}
     </Disclosure>

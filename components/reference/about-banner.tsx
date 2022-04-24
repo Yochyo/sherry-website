@@ -12,7 +12,7 @@ export const AboutBanner = (props: Props) => {
   useEffect(() => {
     const quotes = t('quotes', { returnObjects: true });
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-  }, [router.asPath]);
+  }, [router.asPath, t]);
 
   return (
     <div>

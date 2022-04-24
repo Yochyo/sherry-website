@@ -4,9 +4,11 @@ import { SectionList } from '../components/reference/section/section-list';
 import { SectionMap } from '../components/reference/section/section-map';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 export default function Ref() {
   const { t } = useTranslation('ref');
+  const router = useRouter();
   return (
     <div>
       <div className="pt-4">

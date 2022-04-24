@@ -15,5 +15,9 @@
     "gallery": "Gallery",
     "about": "About",
     "reference": "Reference"
+  },
+  "languages": {
+    "en": "english",
+    "ja": "日本語"
   }
 }
