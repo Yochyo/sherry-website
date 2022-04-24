@@ -18,7 +18,7 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
             key={file}
             className="aspect-4-3 relative w-full bg-neutral-200 bg-opacity-40"
             onClick={() => {
-              setPopoverImage(`/images/landscape/${file}`);
+              setPopoverImage(`/images/gallery/${file}`);
               setOpenPopover(true);
             }}>
             <Image src={`/images/gallery/${file}`} layout={'fill'} objectFit={'contain'} alt={file} />
