@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 type Props = {};
-export const NavbarLanguageButton = (props: Props) => {
+export const NavbarLanguageButton = (_: Props) => {
   const { t, i18n } = useTranslation('header');
   const router = useRouter();
   return (
@@ -34,8 +34,7 @@ export const NavbarLanguageButton = (props: Props) => {
               .filter(key => key != i18n.language)
               .map(it => (
                 <Link href={router.asPath} key={it} locale={it}>
-                  {/* active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',  */}
-                  <a className={classNames('block px-4 py-2 text-sm')}>{t(`languages.${it}`)}</a>
+                  <a className={classNames('block px-4 py-2 text-sm text-gray-700')}>{t(`languages.${it}`)}</a>
                 </Link>
               ))}
           </div>
