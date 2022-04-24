@@ -21,7 +21,7 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
               setPopoverImage(`/images/landscape/${file}`);
               setOpenPopover(true);
             }}>
-            <Image src={`/images/landscape/${file}`} layout={'fill'} objectFit={'contain'} alt={file} />
+            <Image src={`/images/gallery/${file}`} layout={'fill'} objectFit={'contain'} alt={file} />
           </div>
         ))}
       </div>
