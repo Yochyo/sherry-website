@@ -16,11 +16,11 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
 
   const refs: { [key: string]: HTMLDivElement | null } = {};
 
-  const updateQueryParam = (query?: string) => router.push({ href: router.asPath, query: { ...router.query, q: query } }, undefined, { shallow: true });
+  const updateQueryParam = (file?: string) => router.push({ href: router.asPath, query: { ...router.query, q: file } }, undefined, { shallow: true });
 
   // show image if specified in query
   useEffect(() => {
-    const imageName = props.gallery.fileNames.find(it => it == query);
+    const imageName = props.gallery.fileNames.find(it => it.startsWith(`${query}.`));
     setImage(imageName ? toPath(imageName) : undefined);
   }, [props.gallery.fileNames, query]);
 
@@ -34,13 +34,16 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
   return (
     <div className="px-4 py-2 md:px-8 lg:px-16 lg:py-4">
       <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
-        {props.gallery.fileNames.map(file => (
-          <div key={file} className="aspect-4-3 relative w-full overflow-hidden bg-neutral-200 bg-opacity-40" onClick={() => updateQueryParam(file)} ref={ref => (refs[file] = ref)}>
-            <div className="absolute h-full w-full scale-100 transform bg-cover bg-center transition-all duration-1000 ease-in-out hover:scale-110">
-              <Image src={`/images/gallery/${file}`} layout={'fill'} objectFit={'contain'} alt={file} />
+        {props.gallery.fileNames.map(file => {
+          const name = file.substring(0, file.lastIndexOf('.'));
+          return (
+            <div key={file} className="aspect-4-3 relative w-full overflow-hidden bg-neutral-200 bg-opacity-40" onClick={() => updateQueryParam(name)} ref={ref => (refs[name] = ref)}>
+              <div className="absolute h-full w-full scale-100 transform bg-cover bg-center transition-all duration-1000 ease-in-out hover:scale-110">
+                <Image src={`/images/gallery/${file}`} layout={'fill'} objectFit={'contain'} alt={''} />
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <GalleryPopover onClick={() => updateQueryParam(undefined)} src={image} />
     </div>
