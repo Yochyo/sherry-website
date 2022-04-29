@@ -35,8 +35,10 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
     <div className="px-4 py-2 md:px-8 lg:px-16 lg:py-4">
       <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
         {props.gallery.fileNames.map(file => (
-          <div key={file} className="aspect-4-3 relative w-full bg-neutral-200 bg-opacity-40" onClick={() => updateQueryParam(file)}>
-            <Image src={`/images/gallery/${file}`} layout={'fill'} objectFit={'contain'} alt={file} />
+          <div key={file} className="aspect-4-3 relative w-full overflow-hidden bg-neutral-200 bg-opacity-40" onClick={() => updateQueryParam(file)} ref={ref => (refs[file] = ref)}>
+            <div className="absolute h-full w-full scale-100 transform bg-cover bg-center transition-all duration-1000 ease-in-out hover:scale-110">
+              <Image src={`/images/gallery/${file}`} layout={'fill'} objectFit={'contain'} alt={file} />
+            </div>
           </div>
         ))}
       </div>
