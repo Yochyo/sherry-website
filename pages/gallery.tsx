@@ -16,7 +16,7 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
 
   const refs: { [key: string]: HTMLDivElement | null } = {};
 
-  const updateQueryParam = (query?: string) => router.push({ href: router.asPath, query: { ...router.query, query } }, undefined, { shallow: true });
+  const updateQueryParam = (query?: string) => router.push({ href: router.asPath, query: { ...router.query, q: query } }, undefined, { shallow: true });
 
   // show image if specified in query
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
 
   // on initial page load, scroll to selected image. Update query on query change
   useEffect(() => {
-    const q = router.query.query as string | undefined;
+    const q = router.query.q as string | undefined;
     if (query == undefined && q != undefined) refs[q]?.scrollIntoView();
     setQuery(q);
   }, [router.query]);
