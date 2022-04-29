@@ -27,7 +27,7 @@ export default function Gallery(props: InferGetStaticPropsType<typeof getStaticP
   // on initial page load, scroll to selected image. Update query on query change
   useEffect(() => {
     const q = router.query.q as string | undefined;
-    if (query == undefined && q != undefined) refs[q]?.scrollIntoView();
+    if (query == undefined && q != undefined) refs[q]?.scrollIntoView({ block: 'center' });
     setQuery(q);
   }, [router.query]);
 
