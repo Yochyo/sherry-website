@@ -23,8 +23,8 @@ type Props = {};
 
 export default function Navbar() {
   const router = useRouter();
-  const path = router.asPath;
-
+  const path = router.route;
+  console.log({ router });
   return (
     <Disclosure as="nav" className="mb-2 bg-neutral-100 sm:mb-6 md:mb-12">
       {({ open }) => (
