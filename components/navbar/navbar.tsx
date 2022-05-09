@@ -10,12 +10,13 @@ import { NavbarLanguageButton } from './navbar-language-button';
 export type NavigationItem = {
   name: string;
   href: string;
+  disabled?: boolean;
 };
 
 const navigation: NavigationItem[] = [
   { name: 'tabs.home', href: '/' },
   { name: 'tabs.gallery', href: '/gallery' },
-  { name: 'tabs.about', href: '/about' },
+  { name: 'tabs.about', href: '/about', disabled: true },
   { name: 'tabs.reference', href: '/ref' },
 ];
 
