@@ -7,7 +7,7 @@ type Props = {
   url?: string;
 };
 export const Meta = (props: PropsWithChildren<Props>) => {
-  const url = 'https://8be0-2a02-8071-92b9-9400-5df4-8379-4bd8-1791.eu.ngrok.io';
+  const url = 'https://yochyo.me';
   const { t } = useTranslation('header');
 
   return (
