@@ -2713,6 +2713,11 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qs-props@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/qs-props/-/qs-props-2.0.2.tgz#6e2c4d8ad14783d0ea394edb6e2c62957b393fc0"
+  integrity sha512-2HPA8/KE93lDyRC82nrErR5O3RjJk5PACM4wyAjH1P0YMmtrM6o15Ure1kvhb59JQ+u+rZAVdHfvD8n1XPtQhg==
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
