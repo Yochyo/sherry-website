@@ -4,11 +4,18 @@ import { SectionList } from '../components/reference/section/section-list';
 import { SectionMap } from '../components/reference/section/section-map';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 
 export default function Ref() {
   const { t } = useTranslation('ref');
   return (
     <div>
+      <div className="flex justify-center">
+        <div className="relative mx-2 mt-2 w-full md:hidden">
+          <Image src={'/images/landscape/431.jpg'} width={1800} height={1013} layout={'responsive'} objectFit={'contain'} objectPosition={'center'} />
+        </div>
+      </div>
+
       <div className="pt-4">
         <Section src={'/images/ee77526164b7ea432a79a36654bc82facbc7a6431acfff92edaab7b94cfd215a.jpg'} className="grid gap-y-2 divide-y divide-neutral-200">
           <SectionMap title={t('general.title')} elements={t('general.items', { returnObjects: true })} />
