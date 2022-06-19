@@ -11,29 +11,16 @@
   },
   "personality": {
     "title": "Personality",
-    "items": [
-      "Very trusting",
-      "Very patient",
-      "Optimistic & positive",
-      "Makes friends very quickly",
-      "Easy to make happy",
-      "She always tries to appear happy, even when she isn't",
-      "Would do everything for people that mean a lot to her",
-      "Wants to become an elementary school teacher"
-    ]
+    "items": ["Very trusting", "Very patient", "Optimistic & positive", "She always tries to appear happy, even when she isn't", "Would do everything for people that mean a lot to her"]
   },
   "likes": {
     "title": "Likes",
-    "items": ["Reading books and novels", "Flowers (has a garden full of beautiful flowers)", "Fluffy and soft things", "Beautiful outfits and uniforms", "Hugs"]
-  },
-  "dislikes": {
-    "title": "Dislikes",
-    "items": ["Egoism", "Corruption and unfair treatment"]
+    "items": ["Reading books and novels", "Flowers (has a garden full of beautiful flowers)", "Beautiful outfits and uniforms"]
   },
   "food": {
     "likes": {
       "title": "Favorite food",
-      "items": ["Everything you eat at picnics (especially sandwiches)", "All kinds of other fruits", "Ice cream (especially rose flavored)", "Pasta"]
+      "items": ["Everything you eat at picnics (especially sandwiches)", "All kinds of other fruits", "Ice cream (especially rose flavored)"]
     },
     "dislikes": {
       "title": "Dislikes food",
@@ -47,8 +34,7 @@
       ["Hair", "Very dark brown"],
       ["Height", "165cm (5'5\")"],
       ["Weight", "55kg (121 lb)"],
-      ["Bust size", "Small (~A cups)"],
-      ["Nose size", "Small"]
+      ["Bust size", "Small (~A cups)"]
     ]
   },
   "appearance2": ["Her fox ears are slightly white at the end", "Wears two red ribbons on the left side of her hair", "Wears round glasses (sometimes)"],

@@ -14,7 +14,6 @@ export default function Ref() {
           <SectionMap title={t('general.title')} elements={t('general.items', { returnObjects: true })} />
           <SectionList title={t('personality.title')} elements={t('personality.items', { returnObjects: true })} />
           <SectionList title={t('likes.title')} elements={t('likes.items', { returnObjects: true })} />
-          <SectionList title={t('dislikes.title')} elements={t('dislikes.items', { returnObjects: true })} />
           <SectionList title={t('food.likes.title')} elements={t('food.likes.items', { returnObjects: true })} />
           <SectionList title={t('food.dislikes.title')} elements={t('food.dislikes.items', { returnObjects: true })} />
         </Section>
